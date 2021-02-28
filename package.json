@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src",
-    "lint-fix": "eslint ./src --fix"
+    "lint-fix": "eslint ./src --fix --color"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run lint:fix",
+      "npm run lint-fix",
       "git add"
     ]
   }
