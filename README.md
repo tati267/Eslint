@@ -53,3 +53,26 @@ and finally to correct mistakes:
 ``` shell 
 $ npm run lint-fix
 ```
+
+## Husky, Lint staged
+
+### Setting
+
+``` shell 
+$ npm i --save-dev husky lint-staged
+```
+In *package.json* add script:
+
+```  js
+"husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  }
+  ```
